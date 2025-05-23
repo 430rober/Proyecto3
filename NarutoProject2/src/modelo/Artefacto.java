@@ -7,6 +7,7 @@ public class Artefacto {
     private String descripcion;
     private int escenarioId;
     private int batallaId; // puede ser enigma o batalla
+    private int numero1;
 
  // CONSTRUCTORES
     public Artefacto() {}
