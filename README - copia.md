@@ -1,3 +1,0 @@
-# Proyecto3
-
-hola
