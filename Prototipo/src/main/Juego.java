@@ -1,14 +1,18 @@
-/*package modelo;
+package main;
 
+import dao.UsuarioDAO;
+import dao.PersonajeDAO;
 import modelo.Usuario;
 import modelo.Protagonista;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class Principal {
+public class Juego {
 
     private static final Scanner scanner = new Scanner(System.in);
+    private static final UsuarioDAO jugadorDAO = new UsuarioDAO();
+    private static final PersonajeDAO personajeDAO = new PersonajeDAO();
     private static Usuario jugadorActual;
     private static Protagonista protagonista;
 
@@ -17,35 +21,14 @@ public class Principal {
         System.out.println("║          BIENVENIDO A LA AVENTURA DEL MUNDO NARUTO      ║");
         System.out.println("╠═════════════════════════════════════════════════════════╣");
 
-        empezarJuego();
-       /* iniciarSesion();
+        iniciarSesion();
 
         cargarProtagonista();
 
         mostrarMenuPrincipal();
     }
-    
-    private static void empezarJuego() {
-    	System.out.println("Elige un personaje:");
-        System.out.println("1. Naruto");
-        System.out.println("2. Sasuke");
-        System.out.println("3. Gaara");
-        System.out.print("Opción: ");
-        int eleccion = scanner.nextInt();
-        scanner.nextLine();
 
-        String personaje = switch (eleccion) {
-            case 1 -> "Naruto";
-            case 2 -> "Sasuke";
-            case 3 -> "Gaara";
-            default -> {
-                System.out.println("Opción inválida, se selecciona Naruto por defecto.");
-                yield "Naruto";
-            }
-        };
-    }
-
-    /*private static void iniciarSesion() {
+    private static void iniciarSesion() {
         while (true) {
             System.out.println("\n¿Tienes cuenta?");
             System.out.println("1. Iniciar sesión");
@@ -137,7 +120,7 @@ public class Principal {
             switch (opcion) {
                 case 1 -> comenzarJuego();
                 case 2 -> verEstadisticas();
-                case 3 -> System.out.println("En desarrollo");/*jugadorDAO.mostrarTop3();
+                case 3 -> jugadorDAO.mostrarTop3();
                 case 4 -> System.out.println("¡Gracias por jugar!");
                 default -> System.out.println("Opción inválida.");
             }
@@ -181,4 +164,4 @@ public class Principal {
 			System.out.println("6.Palacio Celestial ");
     }
     
-}*/
+}
