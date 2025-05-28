@@ -10,7 +10,9 @@ public class Enemigo {
     private int chakra;
     private List<Ataque> ataques;
 
-    public Enemigo() {}
+    public Enemigo() {
+    	
+    }
 
     public Enemigo(int id, String especie, String nombre, int vida, int chakra) {
     	this.id = id;
@@ -20,6 +22,5 @@ public class Enemigo {
         this.chakra = chakra;
     }
     
-    //getters y setters
-    // ...
+  
 }

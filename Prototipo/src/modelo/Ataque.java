@@ -2,12 +2,23 @@ package modelo;
 
 public class Ataque {
     private String nombre;
-    private int danioCompleto;
-    private int danioParcial;
-    private int danioFallo;
+    private int dañoCompleto;
+    private int esquivar;
+    private int dañoBloqueo;
 
-    public int getDanioCompleto() { return danioCompleto; }
-    public int getDanioParcial() { return danioParcial; }
-    public int getDanioFallo() { return danioFallo; }
-    public String getNombre() { return nombre; }
+    public int getDañoCompleto() { 
+    	return dañoCompleto; 
+    	}
+    
+    public int getDañoBloqueo() { 
+    	return dañoBloqueo; 
+    	}
+    
+    public int getEsquivar() { 
+    	return esquivar; 
+    	}
+    
+    public String getNombre() { 
+    	return nombre; 
+    	}
 }

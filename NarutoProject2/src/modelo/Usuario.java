@@ -53,6 +53,5 @@ public class Usuario {
 		this.puntuacion = puntuacion;
 	}
 
-    // Getters y setters
-    // ...
+  
 }

@@ -14,6 +14,4 @@ public class Secundario {
         this.frase = frase;
     }
 
-    // Getters y setters
-    // ...
 }

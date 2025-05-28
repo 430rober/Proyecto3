@@ -6,10 +6,5 @@ public class Enigma {
     private int puntosOtorgados;
     private String respuestaCorrecta;
 
-    public boolean resolver(String respuesta) {
-        return respuesta.equalsIgnoreCase(respuestaCorrecta);
-    }
-
-    public int getPuntos() { return puntosOtorgados; }
-    public String getDescripcion() { return descripcion; }
+    
 }

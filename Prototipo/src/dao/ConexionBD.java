@@ -6,27 +6,19 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConexionBD {
-    private static final String URL = "jdbc:mysql://localhost:3306/naruto";
-    private static final String USER = "root";
-    private static final String PASSWORD = ""; // o tu contraseña
-
-    public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USER, PASSWORD);
-    }
-    
-    
-    /*
-    // Atributos
+   
+    // ATRIBUTOS
 	public static Connection instance = null;
-	public static final String JDBC_BDD_URL = "jdbc:mysql://localhost:3306/tiendajuegos";
+	public static final String JDBC_BDD_URL = "jdbc:mysql://localhost:3306/BDnaruto"; // RUTA BD
 	
-	// métodos
+	// METODOS
 	public static Connection getConnection () throws SQLException {
 		if (instance== null) {
 			Properties props = new Properties();
+			// USUARIO Y CONTRASEÑA
 			props.put("user", "root");
 			props.put("password", "");
-			//formato caracteres
+			// Formato para asegurar que los caracteres especiales (como tildes o ñ) se manejen correctamente.
 			// props.put("charset", "UTF-8");
 			
 			instance = DriverManager.getConnection(JDBC_BDD_URL, props);
@@ -34,5 +26,5 @@ public class ConexionBD {
 		}
 		return instance;
 	}
-    */
+    
 }
