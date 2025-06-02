@@ -1,31 +1,25 @@
 package modelo;
 
-public class Usuario {
-    private int id;
-    private String nombre;
-    private String contraseña;
-    private int puntuacion;
-    private static Protagonista protagonista;
-    private static Usuario jugadorActual;
+import java.util.ArrayList;
 
-    public Usuario() {
-    	
+public class Usuario extends Protagonista {
+    private ArrayList<Artefacto> artefactos = new ArrayList<>();
+
+    public Usuario(String nombre, int vida, int chakra) {
+        super(nombre, vida, chakra);
     }
 
-    public Usuario(String nombre, String contraseña, String personaje) {
-        this.nombre = nombre;
-        this.contraseña = contraseña;
-        this.puntuacion = 0;
+    public void añadirAtaque(Ataque a) {
+        ataques.add(a);
     }
 
-    /*public static void verEstadisticas() {
-        System.out.println("\nJugador: " + jugadorActual.getNombre());
-        System.out.println("Personaje: " + protagonista.getPersonaje());
-        System.out.println("Puntuación: " + jugadorActual.getPuntuacion());
-        System.out.println("Vida actual: " + protagonista.getVida());
-        System.out.println("Chakra actual: " + protagonista.getChakra());
-        protagonista.getAtaques().forEach(a -> System.out.println(" - " + a.getNombre()));
-    }*/
+    public void añadirArtefacto(Artefacto a) {
+        artefactos.add(a);
+    }
+
+    public ArrayList<Artefacto> getArtefactos() {
+        return artefactos;
+    }
 }
     
    

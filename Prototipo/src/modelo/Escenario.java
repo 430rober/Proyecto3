@@ -2,32 +2,31 @@ package modelo;
 
 public class Escenario {
     private String nombre;
-    private String condicionesAtmosfericas;
-    private String momentoDelDia;
-    private String condicionTerreno;
+    private String descripcion;
+    private String aliado;
+    private Enemigo enemigo;
+    private Enigma enigma;
+    private Artefacto artefacto;
+    private String conversacion;
+    private boolean completado = false;
 
-    public int getPenalizacionAtaque() {
-		return 0;
-        // Calcula según condiciones
-    }
-
-    public int getPenalizacionDefensa() {
-		return 0;
-        // Calcula según condiciones
+    public Escenario(String nombre, String descripcion, String aliado, Enemigo enemigo, Enigma enigma, Artefacto artefacto, String conversacion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.aliado = aliado;
+        this.enemigo = enemigo;
+        this.enigma = enigma;
+        this.artefacto = artefacto;
+        this.conversacion = conversacion;
     }
 
     public String getNombre() { return nombre; }
-    
-    public void menuEscenario() {
-    	System.out.println("ELIGE UNA UBICACIÓN A LA QUE IR:");
-		System.out.println("");
-		System.out.println("1.Cueva de la Niebla Oscura ");
-		System.out.println("2.Laboratorio Perdido ");
-		System.out.println("3.Templo del Tiempo ");
-		System.out.println("4.Fortaleza de las Sombras");
-		System.out.println("5.Santuario de la Arena Desolada ");
-		System.out.println("6.Palacio Celestial ");
-		System.out.println("\n - Volver al INICIO");
-    }
-
+    public String getDescripcion() { return descripcion; }
+    public String getAliado() { return aliado; }
+    public Enemigo getEnemigo() { return enemigo; }
+    public Enigma getEnigma() { return enigma; }
+    public Artefacto getArtefacto() { return artefacto; }
+    public String getConversacion() { return conversacion; }
+    public boolean isCompletado() { return completado; }
+    public void marcarCompletado() { this.completado = true; }
 }
